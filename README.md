@@ -1,5 +1,5 @@
 # LASER AUDIO INSTRUMENT
-# Table of Contents :
+## Table of Contents :
 1. [Introduction](#introduction) 
 2. [Installation and Configuration](#installation-and-configuration) 
 3. [Concept](#concept) 

@@ -1,9 +1,15 @@
-# Laser-Audio-Instrument
-Converting light's intensity into musical notes that can replace any musical instrument.
 # LASER AUDIO INSTRUMENT
+# Table of Contents :
+1. [Introduction](#introduction) 
+2. [Installation and Configuration](#installation-and-configuration) 
+3. [Concept](#concept) 
+4. [Python code analysis](#python-code-analysis) 
+5. [Structure](#structure) 
+6. [How to use](#how-to-use) 
+7. [Improvement](#improvement)
 
 ## Introduction
-This project aims to use the light intensity of a red optic laser, using:
+This project aims to convert the light intensity of a red optic laser into audio, using:
 
  - Arduino Microcontroller
  - A standard USB connection
@@ -71,6 +77,6 @@ The project is split between 3 scripts of Python, one Arduino script(the .txt fi
 After downloading the repo and configuring the breadboard with all the required components, upload the Arduino code on the microcontroller. Then run the `arduino.py` script and let it run as long as you want to record the laser. After that run the `plot.py` and the `create.py` scripts. You will obtain the audio file `combined_file.wav` depending on the notes selected in the `audio` folder.
 ## Improvement 
 
- 1. Develop the wave in such manner that it needs no mapping and is the final audio result.
+ 1. Develop the wave in such manner that it does not need mapping and is the final audio result.
  2. Make the audio be played in real-time.
  3. Create a GUI for the project.

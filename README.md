@@ -58,7 +58,7 @@ Project's requirements:
 &nbsp;&nbsp;&nbsp;&nbsp;For the development of the Python scripts, we will mainly store data in NumPy Arrays, Pandas DataFrame and NumPy cos and sin functions. The Python code is split between 3 scripts for a more easier debugging and for an easier future scaling. The first two scripts are pretty straight forward: the first ones only gets data from the connection and validates it, the second one reads values from a file and assigns each one a value on the time axis so we can plot and create a function on the XOY axis. The third function is the most complex one: by using the SciPy.Interpolate.CubicSpline method we create a function able to connect all the data points. Then by using the NumPy cos method we define the function of a carrier wave that is then modulated with other NumPy cos wave defined function. By using the wavfile import of the SciPy.IO package we can edit the final audio file. For this we need to parse the **combined_signal** and map it's values to certain audio notes, contained in the list **violin_notes**.
 
 ## Structure
-&nbsp;&nbsp;&nbsp;&nbsp;The project is split between 3 scripts of Python, one Arduino script(the .txt file), and a folder containing all the musical notes a.k.a. `audio`:
+&nbsp;&nbsp;&nbsp;&nbsp;The project is split between 3 scripts of Python, one Arduino script, and a folder containing all the musical notes a.k.a. `audio`:
 
    - ``arduino.py``
 	   This establishes the connection between the Arduino setup and collects the data transmitted by the microcontroller. Every set of values is written in the terminal and then flushed until the connection is lost or the user cancels it (Ctrl + C). The values are saved in the `received_values.txt`.
@@ -66,7 +66,7 @@ Project's requirements:
 	   Each number from the `received_values.txt` is assigned a time value, based on the **time_interval** variable, and checked if it is valid. Then it is saved in the `data_points.txt`. 
    - ``create.py``
 	  Using cubic spline interpolation we obtain a function which passes through of all our data points collected. By modelling a carrier wave with our function and modulating it we obtain a wave that we use for the audio mapping
-   - ``sensor.txt`` 
+   - ``sensor.ino`` 
 	  A basic script of establishing a connection with the sensor on a certain pin and the serial communication protocol by controlling the baud rate.
    - `audio`
 	  A folder containing all the musical notes in a .wav format.
